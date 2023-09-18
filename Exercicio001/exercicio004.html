@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 04</title>
+</head>
+
+<body>
+  <h1>Insira as notas do aluno</h1>
+  <div class="dados">
+    <label for="nota1">Nota 1:</label>
+    <br>
+    <input type="number" id="nota1" placeholder="Nota 1">
+    <br><br>
+
+    <label for="nota2">Nota 2:</label>
+    <br>
+    <input type="number" id="nota2" placeholder="Nota 2">
+  </div>
+  <br>
+  <button onclick="calcular()">Calcular</button>
+
+  <script>
+    function calcular() {
+
+      let nota1 = Number(document.getElementById("nota1").value);
+      let nota2 = Number(document.getElementById("nota2").value);
+
+
+      let media = (nota1 + nota2) / 2;
+
+
+      document.querySelector(".mensagem").innerHTML = `A média entre ${nota1} e ${nota2} é igual a ${media}.`;
+    }
+  </script>
+
+  <div class="mensagem"></div>
+</body>
+
+</html>

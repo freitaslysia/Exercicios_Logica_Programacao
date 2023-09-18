@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 03</title>
+</head>
+
+<body>
+  <h1>Insira dois números inteiros</h1>
+  <div class="dados">
+    <label for="num1">Primeiro número:</label>
+    <br>
+    <input type="number" id="numero1" placeholder="Primeiro número">
+    <br><br>
+
+    <label for="n2">Segundo número:</label>
+    <br>
+    <input type="number" id="numero2" placeholder="Segundo número">
+
+  </div>
+  <br>
+  <button onclick="calcular()">Calcular</button>
+
+  <script>
+    function calcular() {
+
+      let numero1 = Number(document.getElementById("numero1").value);
+      let numero2 = Number(document.getElementById("numero2").value);
+
+      let soma = numero1 + numero2;
+
+      document.querySelector(".mensagem").innerHTML = `A soma entre ${numero1} e ${numero2} é igual a ${soma}.`;
+    }
+  </script>
+
+  <div class="mensagem"></div>
+</body>
+
+</html>
