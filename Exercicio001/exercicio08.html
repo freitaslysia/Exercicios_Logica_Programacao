@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 08</title>
+</head>
+
+<body>
+  <h1>Converter moedas</h1>
+  <div class="dados">
+    <label for="reais">Reais:</label>
+    <br>
+    <input type="number" id="reais" placeholder="Quantidade de reais">
+  </div>
+  <br>
+  <button onclick="converter()">Converter</button>
+
+  <script>
+    function converter() {
+
+      let reais = Number(document.getElementById("reais").value);
+
+      let dolares = reais / 3.45;
+
+      document.querySelector(".mensagem").innerHTML = `
+    Com ${reais} reais, você pode comprar ${dolares.toFixed(2)} dólares.
+  `;
+    }
+  </script>
+  <div class="mensagem"></div>
+</body>
+
+</html>

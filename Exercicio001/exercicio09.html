@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 09</title>
+</head>
+
+<body>
+  <h1>Calcular tinta</h1>
+  <div class="dados">
+    <label for="largura">Largura (m):</label>
+    <br>
+    <input type="number" id="largura" placeholder="Largura da parede">
+    <br>
+    <br>
+    <label for="altura">Altura (m):</label>
+    <br>
+    <input type="number" id="altura" placeholder="Altura da parede">
+  </div>
+  <br>
+  <button onclick="calcular()">Calcular</button>
+
+  <script>
+    function calcular() {
+
+      let largura = Number(document.getElementById("largura").value);
+      let altura = Number(document.getElementById("altura").value);
+
+      let area = largura * altura;
+
+      let tinta = area / 2;
+
+      document.querySelector(".mensagem").innerHTML = `
+    A área a ser pintada é de ${area} metros quadrados. 
+    <br>
+    A quantidade de tinta necessária é de ${tinta} litros.
+  `;
+    }
+  </script>
+  <div class="mensagem"></div>
+</body>
+
+</html>

@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercicio 07</title>
 </head>
+
 <body>
-  
+  <h1>Converter distância</h1>
+  <div class="dados">
+    <label for="distancia">Distância (m):</label>
+    <input type="number" id="distancia" placeholder="Distância em metros" value="185.72">
+  </div>
+  <br>
+  <button onclick="converter()">Converter</button>
+
+  <script>
+    function converter() {
+
+      let distancia = Number(document.getElementById("distancia").value);
+
+
+      let km = distancia / 1000;
+      let hm = distancia / 100;
+      let dam = distancia / 10;
+      let dm = distancia;
+      let cm = distancia * 100;
+      let mm = distancia * 1000;
+
+
+      document.querySelector(".mensagem").innerHTML = `
+    A distância de ${distancia}m corresponde a:
+    <br>
+    ${km.toFixed(4)}Km
+    <br>
+    ${hm.toFixed(4)}Hm
+    <br>
+    ${dam.toFixed(4)}Dam
+    <br>
+    ${dm.toFixed(4)}dm
+    <br>
+    ${cm.toFixed(4)}cm
+    <br>
+    ${mm.toFixed(4)}mm
+  `;
+    }
+  </script>
+  <div class="mensagem"></div>
 </body>
+
 </html>
